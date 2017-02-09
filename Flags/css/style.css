@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #555;
+  background-color: #333;
   text-align: center;
 }
 
@@ -80,4 +80,21 @@ body{
   transition-duration: 1.5s;
   opacity: 1;
   z-index: -1;
+}
+
+footer{
+  background-color: #111;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+}
+
+footer a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #3498db;
+}
+
+footer a:hover{
+  color: #2980b9;
 }
