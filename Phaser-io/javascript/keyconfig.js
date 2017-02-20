@@ -16,9 +16,7 @@
 
   function create(){
     keys = game.input.keyboard.createCursorKeys();
-    keyA = game.input.keyboard.addKey(Phaser.keyboard.A);
-    keyA = game.input.keyboard.addKey(Phaser.keyboard.W);
-    keyA = game.input.keyboard.addKey(Phaser.keyboard.D);
+    
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //background
