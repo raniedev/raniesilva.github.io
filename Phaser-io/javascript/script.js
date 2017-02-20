@@ -5,7 +5,6 @@
     update: update
   });
   var platforms, player, keys, stars, score = 0;
-  var keyA, keyW, keyD;
   
   function preload(){
     game.load.image('sky', 'images/sky.png');
@@ -16,9 +15,6 @@
 
   function create(){
     keys = game.input.keyboard.createCursorKeys();
-    keyA = game.input.keyboard.addKey(Phaser.keyboard.A);
-    keyA = game.input.keyboard.addKey(Phaser.keyboard.W);
-    keyA = game.input.keyboard.addKey(Phaser.keyboard.D);
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //background
@@ -67,10 +63,10 @@
     game.physics.arcade.overlap(player,stars,collectStar);
 
     player.body.velocity.x = 0;
-    if(keys.left.isDown || keyA.isDown){
+    if(keys.left.isDown){
       player.body.velocity.x = -150;
       player.animations.play('left');
-    }else if(keys.right.isDown || keyD.isDown){
+    }else if(keys.right.isDown){
       player.body.velocity.x = 150;
       player.animations.play('right');
     }else{
@@ -78,7 +74,7 @@
       player.frame = 4;
     }
 
-    if((keys.up.isDown && player.body.touching.down) || keyW.isDown){
+    if(keys.up.isDown && player.body.touching.down){
       player.body.velocity.y = -350;
     }
   }
