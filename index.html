@@ -1,30 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
-        <title>Título</title>
+        <title>The King of Fighters</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-widthm initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            /* .mobile-container {
+                background-color: #555;
+                height: 500px;
+                color: white;
+                border-radius: 10px;
+            } */
+
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+            }
+
+            .topnav #menu-items {
+                display: none;
+            }
+
+            .topnav a {
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                display: block;
+            }
+
+            .topnav a.icon {
+                background: #3498db;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav a:hover {
+                background-color: #2970a0;
+                color: black;
+            }
+
+            /* .topnav ul {
+                padding: 0px;
+                margin: 0px;
+            
+            } */
+
+            .topnav ul {
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .active {
+                background-color: #3498db;
+                color: white;
+            }
+        </style>
     </head>
     <body>
-        <div class="container intro">
-            <h1>Preserve a natureza<br>do <span class="br">Br</span><span class="as">as</span><span class="il">il</span></h1>
-        </div>
-        <div class="container">
-            <div class="grid-12 sobre">
-                <h2>Monitoramento da Arara-azul</h2>
-
-                <p>O estudo da Dinâmica populacional da arara-azul-de-lear, espécie ameaçada de extinção e endêmica da caatinga, ocorre desde 2014 com o apoio da Fundação Biodiversitas (FB), do Instituto Arara Azul (ITA), e do Centro de Estudos de Migração de Aves (CEMAVE-ICMBio). É coordenado pela bióloga Erica Pacífico, doutoranda participante do Programa Ciências sem Fronteiras, CAPES, e também do Departamento de Biologia da Conservação da Estação Biológica de Doñana (EBD-CSIC), Espanha. O estudo é realizado em colaboração com o Museu de Zoologia da Universidade de São Paulo (MZUSP), e com o Laboratório de Genética Molecular de Aves da Universidade de São Paulo (LGEMA). Os trabalhos de campo são financiados pela World Parrot Trust (WPT), da Inglaterra, e pela Toyolex Veículos Concessionária, de Recife, e os trabalhos realizados em Laboratório são financiados pela Loro Parque Fundación, da España.</p>
-            </div>    
-            <div class="grid-3"></div>
-            <div class="grid-3"><img src="img/imagem-2.jpg"></div>
-            <div class="grid-3"><img src="img/imagem-1.jpg"></div>
-            <div class="grid-3"></div>    
-            <div class="grid-12 sobre">
-                <p>O monitoramento de ninhos começou na reserva privada da Fundação Biodiversitas, a Estação Biológica de Canudos (EBC), localmente conhecida como Toca Velha, com quem contamos com o apoio para estudar a Biologia Reprodutiva da espécie desde 2008. Com este estudo muitas perguntas surgiram sobre as estratégias de conservação da espécie em longo prazo. Com o monitoramento de ninhos desenvolvemos métodos alternativos e inovadores de marcação de psitacídeos, os quais nos permitem fazer seguimento e também estimativas da sobrevivência dos filhotes de araras-azuis-de-lear - após voarem de seus ninhos e se dispersarem na Caatinga. Assim, descobrimos novos dormitórios e áreas de reprodução das araras localizados em áreas remotas não protegidas. Estas áreas, em sua maioria, são zonas rurais que sofrem com a falta d’água. Portanto, contamos com o apoio dos moradores locais para que possamos acampar em suas propriedades e para conhecer locais históricos de ocorrência da arara-azul-de-lear. Fazemos entrevistas com os moradores mais antigos destes povoados de modo a descobrir mais sobre os processos de declínio populacional desta espécie.</p>
+        <!-- Simulate a smartphone / tablet -->
+        <div class="mobile-container">
+            <!-- Top Navigation Menu -->
+            <div class="topnav">
+                <a href="#home" class="active">
+                        <i class="material-icons">polymer</i>
+                </a>
+                <ul id="menu-items">
+                    <li><a href="#news">Notícias</a></li>
+                    <li><a href="#news">Registrar</a></li>
+                    <li><a href="#news">Entrar</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="material-icons">menu</i>
+                </a>
             </div>
             
+            <h1>Menu principal teste</h1>
+        <!-- End smartphone / tablet look -->
         </div>
-        <script src="js/script.js"></script>
+        
+        <script defer src="https://friconix.com/cdn/friconix-0.709.js"></script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("menu-items");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
     </body>
 </html>
