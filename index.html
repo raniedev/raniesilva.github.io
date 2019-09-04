@@ -3,100 +3,113 @@
     <head>
         <title>The King of Fighters</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-widthm initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <style>
+            
             body {
                 font-family: Arial, Helvetica, sans-serif;
+                padding: 0px;
+                margin: 0px;
+            }
+            
+            .material-icons {
+                padding: 0px;
+                margin: 0px;
             }
 
-            /* .mobile-container {
-                background-color: #555;
-                height: 500px;
-                color: white;
-                border-radius: 10px;
-            } */
-
-            .topnav {
-                overflow: hidden;
-                background-color: #333;
+            .main-nav {
+                /* overflow: hidden; */
+                background-color: #4f5158;
                 position: relative;
             }
 
-            .topnav #menu-items {
+            .main-nav #menu-items {
                 display: none;
             }
 
-            .topnav a {
+            .main-nav a {
                 color: white;
-                padding: 14px 16px;
                 text-decoration: none;
-                font-size: 17px;
+                font-size: 18px; 
                 display: block;
+                padding: 15px 16px 10px 15px;
             }
 
-            .topnav a.icon {
-                background: #3498db;
+            /* Vai jogar o menu para o canto superior direito */
+            .main-nav a.icon {
                 display: block;
                 position: absolute;
                 right: 0;
                 top: 0;
             }
 
-            .topnav a:hover {
-                background-color: #2970a0;
-                color: black;
+            .main-nav ul a:hover {
+                background-color: #3498db;
+            }
+            
+            .main-nav img {
+                width: 56px;
+                height: 56px;
+                margin-bottom: -4px;
+                /* border: 1px dotted #3498db; */
             }
 
-            /* .topnav ul {
-                padding: 0px;
-                margin: 0px;
-            
-            } */
+            #logo {
+                background-color: #24252a;
+                color: #fff;
+                height: 56px;
+            }
 
-            .topnav ul {
+            .icon{
+                border: 1px dotted #24252a;
+            }
+            
+            .main-nav ul {
                 list-style: none;
                 margin: 0px;
                 padding: 0px;
             }
-
-            .active {
-                background-color: #3498db;
-                color: white;
-            }
         </style>
     </head>
     <body>
-        <!-- Simulate a smartphone / tablet -->
-        <div class="mobile-container">
-            <!-- Top Navigation Menu -->
-            <div class="topnav">
-                <a href="#home" class="active">
-                        <i class="material-icons">polymer</i>
-                </a>
+        <main class="main-nav">
+            <div id="logo">
+                <!-- <a href="#home"><i class="material-icons">polymer</i></a> -->
+                <img src="img/bird.png">
+            </div>
+            <a id="mobile-menu" href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+                <i class="material-icons">menu</i>
+            </a>
+            <nav>
                 <ul id="menu-items">
                     <li><a href="#news">Notícias</a></li>
                     <li><a href="#news">Registrar</a></li>
                     <li><a href="#news">Entrar</a></li>
                 </ul>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="material-icons">menu</i>
-                </a>
-            </div>
-            
-            <h1>Menu principal teste</h1>
-        <!-- End smartphone / tablet look -->
+            </nav>
+        </main>
+        <div class="container">
+            <div class="grid-12"></div>
+            <div class="grid-6"></div>
+            <div class="grid-6"></div>
         </div>
-        
-        <script defer src="https://friconix.com/cdn/friconix-0.709.js"></script>
+    
         <script>
-            function myFunction() {
+            function mobileMenu() {
                 var x = document.getElementById("menu-items");
+                var y = document.getElementById("mobile-menu");
                 if (x.style.display === "block") {
                     x.style.display = "none";
+                    y.style.border = "1px dotted #24252a";
+                    y.style.color = "#fff";
+                    y.innerHTML = "<i class=\"material-icons\">menu</i>";
                 } else {
                     x.style.display = "block";
+                    y.style.border = "1px dotted #3498db";
+                    y.style.color = "#3498db";
+                    y.innerHTML = "<i class=\"material-icons\">close</i>";
                 }
             }
         </script>
